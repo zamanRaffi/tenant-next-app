@@ -1,0 +1,65 @@
+.personalStories {
+    width: 95%;
+    height: 60vh;
+
+  }
+  
+  .personalStories h1 {
+    color: #d9d9d9;
+  }
+  .personalStories p {
+    color: #949494;
+    padding: 0 1.2rem;
+    font-size: 1.2rem;
+  }
+  
+  .personalStories {
+    position: relative;
+  }
+  
+  .personalStories::before {
+    content: "";
+    position: absolute;
+    top: -38%;
+    left: -12%;
+    background: url("/plain3.png");
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    z-index: 9999999;
+    width: 100%;
+    height: 100%;
+    color: #d9d9d9;
+    pointer-events: none;
+  }
+  
+  .personalStories::after {
+    content: "";
+    position: absolute;
+    top: -5%;
+    right: 1%;
+    background: url("/Union.png");
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  } 
+
+  .straightLine5 {
+    border-top: 0.1rem solid #d9d9d9;
+    width: 68%;
+    
+  }
+
+
+/* CSS to change the background color of arrows */
+.splide__arrow {
+   /* Replace 'your_color_here' with your desired color */
+}
+
+.splide__arrow .splide__arrow--prev{
+  background-color: red
+}
