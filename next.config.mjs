@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    env: {
+      TOKEN_SECRET: 'mynameisraffiwhereistenentappman',
+    },
+  };
+  
+  export default nextConfig;
+  

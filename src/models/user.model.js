@@ -1,28 +1,69 @@
 import mongoose from "mongoose";
 
 const userSchema = mongoose.Schema({
-  email: {
-      type: String,
-      required: [true, 'User email is required'],
-      unique: true,
-      trim: true
-  },
-   password:{
+  firstName: {
     type: String,
-    required: [true, 'User email is required'],
+    required: [true, 'First Name is required'],
     trim: true
-    },
+  },
+  lastName: {
+    type: String,
+    required: [true, 'Last Name is required'],
+    trim: true
+  },
+  email: {
+    type: String,
+    required: [true, 'Email is required'],
+    unique: true,
+    trim: true
+  },
+  password: {
+    type: String,
+    required: [true, 'Password is required'],
+    trim: true
+  },
+  phoneNumber: {
+    type: Number,
+    required: [true, 'Phone Number is required'],
+    unique: true,
+    trim: true
+  },
+  state: {
+    type: String,
+    required: [true, 'State is required'],
+    trim: true
+  },
+  zipCode: {
+    type: String,
+    required: [true, 'Zip Code is required'],
+    trim: true
+  },
+  idCardNo: {
+    type: String,
+    required: [true, 'ID Card Number is required'],
+    trim: true
+  },
+  drivingLicenseNo: {
+    type: String,
+    required: [true, 'Driving License Number is required'],
+    trim: true
+  },
+  address: {
+    type: String,
+    required: [true, 'Address is required'],
+    trim: true
+  },
   createdAt: {
-      type: Date,
-      default: Date.now
+    type: Date,
+    default: Date.now
   },
-  isVerfied:{
-   type:Boolean,
-   default:false
+  isVerified: {
+    type: Boolean,
+    default: false
   },
-  isAdmin:{
-    type:Boolean,
-    default:false
+  isAdmin: {
+    type: Boolean,
+    default: false
   },
   forgotPasswordToken: String,
   forgotPasswordExpiry: Date,
@@ -30,9 +71,8 @@ const userSchema = mongoose.Schema({
   verifyTokenExpiry: Date,
 });
 
-mongoose.models ={};
+mongoose.models = {};
 
-const User = mongoose.models.users || mongoose.model("User",userSchema);
-
+const User = mongoose.models.User || mongoose.model("User", userSchema);
 
 export default User;

@@ -1,11 +1,12 @@
 "use client"
 import React from 'react';
 import Link from 'next/link';
-import style from '../../styles/Footer.module.css';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 const Footer = () => {
     const router = usePathname();
+
+    const pathName = usePathname();
 
     const shouldShowFooter = () => {
         return !['/signup', '/login','/profile'].some(route => router.startsWith(route)); 
@@ -14,11 +15,11 @@ const Footer = () => {
 
     return shouldShowFooter() ?(
         <div>
-            <footer>
-                <div className={`container mx-auto p-8 rounded-tr-3xl rounded-tl-3xl ${style.footer}`}>
+            <footer className='bg-black'>
+                <div className="mx-auto p-8 rounded-tr-3xl rounded-tl-3xl w-[95%] bg-white">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div className="col-span-1">
-                            <div className={`input-group ${style.inputGroupText}`}>
+                        <div className="col-span-1 ml-8">
+                            <div className="input-group">
                             <span className="rounded-3 mt-4" id="basic-addon1">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +33,7 @@ const Footer = () => {
                                     </svg>
                                 </span>
                                 <select
-                                    className={`form-select rounded-3 mt-4 ${style.formSelect}`}
+                                    className="form-select rounded-3 mt-4"
                                     aria-label="Default select example"
                                     defaultValue="American English"
                                 >
@@ -56,27 +57,27 @@ const Footer = () => {
                                 <h3 className="text-center text-2xl mb-5">Company</h3>
                                 <ul className="navbar-nav text-center text-xl">
                                     <li className="nav-item active">
-                                        <Link href='/' className="hover:text-cyan-400">Home</Link>
+                                    <Link href='/' className={` text-black ${pathName === "/" ? "active" : ""}`}> Home </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href='/pricing' className=" hover:text-cyan-400">Pricing</Link>
+                                    <Link href='/pricing' className={` text-black ${pathName === "/pricing" ? "active" : ""}`}> Pricing </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href='/getAccredited' className=" hover:text-cyan-400">Get Accredited</Link>
+                                    <Link href='/getAccredited' className={` text-black ${pathName === "/getAccredited" ? "active" : ""}`}>Get Accredited</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href='/startReview' className=" hover:text-cyan-400">Start A Review</Link>
+                                    <Link href='/startReview' className={` text-black ${pathName === "/startReview" ? "active" : ""}`}>Start A Review</Link>
                                     </li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div className="col-span-1">
-                            <div className="mt-5 mx-4 text-black">
-                                <h3 className='text-2xl ml-2'>Contact</h3>
+                        <div className="col-span-1 ">
+                            <div className="mt-5 ml-36 text-black">
+                                <h3 className='text-2xl'>Contact</h3>
                                 <div>
                                     <p>
-                                        <span className="mx-2">
+                                        <span className="">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="16"
@@ -91,7 +92,7 @@ const Footer = () => {
                                         (678) 689-591-6138
                                     </p>
                                     <p>
-                                        <span className="mx-2">
+                                        <span className="">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="16"
@@ -103,10 +104,10 @@ const Footer = () => {
                                                 {/* <!-- SVG path --> */}
                                             </svg>
                                         </span>
-                                        US Headquarters, Las Vegas, NV
+                                        US Headquarters,Las Vegas,NV
                                     </p>
                                     <p>
-                                        <span className="mx-2">
+                                        <span className="">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="16"
@@ -121,7 +122,7 @@ const Footer = () => {
                                         settlekarma.com
                                     </p>
                                     <p>
-                                        <span className="mx-2">
+                                        <span className="">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="16"

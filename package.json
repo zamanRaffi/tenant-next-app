@@ -1,5 +1,5 @@
 {
-  "name": "raffi-next",
+  "name": "tenenat-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,21 +9,29 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
     "axios": "^1.6.8",
     "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.3",
     "next": "14.1.4",
     "next-auth": "^4.24.7",
     "react": "^18",
     "react-dom": "^18",
+    "react-dropzone": "^14.2.3",
     "react-hot-toast": "^2.4.1",
+    "react-icons": "^5.2.1",
     "tsparticles": "^3.3.0",
     "tw-elements-react": "^1.0.0-alpha2"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.6",
     "@types/react": "18.3.2",
     "autoprefixer": "^10.0.1",
     "daisyui": "^4.9.0",

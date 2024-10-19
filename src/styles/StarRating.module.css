@@ -1,0 +1,17 @@
+.starRating {
+  display: flex;
+  flex-direction: row;
+}
+.starRating input {
+  display: none;
+}
+
+.filled {
+  color: #e44320; 
+}
+
+.unfilled {
+  color: #e44320; 
+  stroke: #e44320; 
+
+}

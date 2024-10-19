@@ -10,7 +10,7 @@ connectdb();
 export async function POST(request) {
     try {
         const reqBody = await request.json();
-        const { email, password} = reqBody;
+        const { firstName,lastName,phoneNumber,state,zipCode,idCardNo,drivingLicenseNo,address,email, password} = reqBody;
 
         // Check if user already exists
         const user = await User.findOne({ email })
@@ -25,8 +25,17 @@ export async function POST(request) {
 
         // Create User
         const newUser = new User({
+            firstName,
+            lastName,
             email,
-            password: hashedPassword
+            password: hashedPassword,
+            phoneNumber,
+            state,
+            zipCode,
+            idCardNo,
+            drivingLicenseNo,
+            address
+
         });
 
         await newUser.save();

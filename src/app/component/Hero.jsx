@@ -1,15 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
-import style from '../../styles/Hero.module.css'
 const Hero = () => {
-    return (
-      <section className="header-banner mb-5 " style={{ height: '70vh' }}>
+  return (
+    
+    <section className="header-banner" style={{ height: '65vh' }}>
       <div className="flex flex-row">
-        <div className={`${style.bannerTitle} w-1/2`}>
-          <div className=" flex text-5xl font-bold text-white mb-5">
+        <div className={`p-[2.5rem] w-1/2`}>
+          <div className=" flex text-5xl text-white mb-5">
             SHARE YOUR
             <svg
-              className={style.bannerSvg}
+              className="w-[2.5rem] h-[2.5rem] ml-[5rem] fill-current"
               xmlns="http://www.w3.org/2000/svg"
               height="5"
               width="5"
@@ -20,43 +20,36 @@ const Hero = () => {
               />
             </svg>
           </div>
-          <div className="text-5xl font-bold text-white mb-5">REVIEWS &</div>
-          <div className="text-5xl font-bold text-white mb-5">PHOTOS ON</div>
-          <div className="text-5xl font-bold text-white mb-5">TRASHY TENANT</div>
-          <hr className={style.straightLine} />
-    
-         <div className='mt-5'>
-         <label className="input input-bordered flex items-center gap-2" style={{ width: "28rem" }}>
-  <input type="text" className="grow" placeholder="Search Before You Rent" />
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg>
-</label>
-         </div>
+          <h1 className="text-5xl text-white mb-5">REVIEWS &</h1>
+          <h1 className="text-5xl text-white mb-5">PHOTOS ON</h1>
+          <strong className="text-6xl font-bold text-white mb-5">TRASHY TENANT</strong>
+          <hr className="border-b-1 border-white w-[32rem]" />
+
+          <div className="mt-10 input input-bordered flex items-center gap-2 bg-white w-[32rem]">
+
+            <input type="text" className="grow text-black" placeholder="Search Before You Rent" />
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-[2.5rem] h-[3rem] opacity-70"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg>
+
+          </div>
         </div>
-    
-        <div className="w-1/2 images flex">
-          <div className={style.img1}>
+
+        <div className="flex relative">
+          <div className="mt-[3rem] w-[14rem] h-[14rem] absolute left-40">
             <Image src="/header1.png" width={300} height={250} alt="Image" />
           </div>
-    
-          <div className={`${style.img2} mb-2`}>
-            <Image className="ml-6" src="/header2.png" width={300} height={250} alt="Image" />
-    
-            <div className="reviwes-count mt-5">
-              <h1 className="text-center text-4xl mb-1 text-white">200+</h1>
-              <h1 className="text-center text-2xl ml-4 mb-2 text-white">REVIEWS</h1>
-              <hr className={style.straightLine2} />
-            </div>
-    
-            <div className={style.headerImg3}>
-              <Image src="/header3.png" width={250} height={250} alt="Image" />
-            </div>
+
+          <div className="mt-[1rem] w-[14rem] h-[14rem] absolute top-[30rem] left-[36rem] ">
+
+
+
           </div>
         </div>
       </div>
     </section>
-    
 
-    );
+
+  );
 };
 
 export default Hero;
