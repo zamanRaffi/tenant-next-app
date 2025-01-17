@@ -5,7 +5,7 @@ const PreventSection = () => {
   return (
     
 
-<section className="mt-5 h-[90vh]" >
+<section className="mt-5 h-[90vh] mb-6" >
 
 <div >
     <h1 className="mt-24 text-white text-4xl text-center font-semibold">

@@ -15,7 +15,7 @@ const Footer = () => {
 
     return shouldShowFooter() ?(
         <div>
-            <footer className='bg-black'>
+            <footer className='bg-black mt-6'>
                 <div className="mx-auto p-8 rounded-tr-3xl rounded-tl-3xl w-[95%] bg-white">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div className="col-span-1 ml-8">
